@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Order Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+
+    label, input, button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .item-name {
+      flex: 0 0 60%;
+    }
+
+    .item-price {
+      flex: 0 0 35%;
+    }
+
+    #totalLabel {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: right;
+    }
+
+    #saveButton {
+      padding: 10px 15px;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #newBill{
+      padding: 10px 15px; 
+      font-size: 1rem; 
+      background-color: #f44336; 
+      color: white; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .item-row {
+        flex-wrap: nowrap;
+      }
+
+      /* #saveButton {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      } */
+    }
+
+    #datetime {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="newBill" onclick="location.reload()">
+    New Bill
+  </button>
+
+  <button id="saveButton" onclick="saveBill()">Save</button>
+
+  <label id="datetime">Loading date and time...</label>
+
+  <input type="text" id="customerName" placeholder="Enter Customer Name">
+
+  <button onclick="addItemRow()">Add</button>
+
+  <div id="itemsContainer"></div>
+
+  <div id="totalLabel">Total: LKR 0.00</div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleString();
+      document.getElementById('datetime').textContent = `Current Date & Time: ${formatted}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    function updateTotal() {
+      const priceInputs = document.querySelectorAll('.item-price');
+      let total = 0;
+      priceInputs.forEach(input => {
+        const value = parseFloat(input.value);
+        if (!isNaN(value)) {
+          total += value;
+        }
+      });
+      document.getElementById('totalLabel').textContent = `Total: LKR ${total.toFixed(2)}`;
+    }
+
+    function addItemRow() {
+      const container = document.getElementById('itemsContainer');
+      const row = document.createElement('div');
+      row.className = 'item-row';
+
+      const itemInput = document.createElement('input');
+      itemInput.type = 'text';
+      itemInput.placeholder = 'Item Name';
+      itemInput.className = 'item-name';
+
+      const priceInput = document.createElement('input');
+      priceInput.type = 'number';
+      priceInput.placeholder = 'Price';
+      priceInput.className = 'item-price';
+      priceInput.addEventListener('input', updateTotal);
+
+      row.appendChild(itemInput);
+      row.appendChild(priceInput);
+      container.appendChild(row);
+
+      updateTotal();
+    }
+
+    function saveBill() {
+      const customerName = document.getElementById('customerName').value.trim() || 'Unknown Customer';
+      const rows = document.querySelectorAll('.item-row');
+      const totalText = document.getElementById('totalLabel').textContent;
+      const total = parseFloat(totalText.replace('Total: LKR ', ''));
+
+      if (total === 0) {
+        alert("Total is empty. Cannot save bill.");
+        return;
+      }
+
+      let billText = `Client Name: ${customerName}\n`;
+      billText += `Date: ${new Date().toLocaleString()}\n\n`;
+      billText += `Items:\n`;
+
+      rows.forEach((row, index) => {
+        const item = row.querySelector('.item-name').value.trim() || 'Unnamed Item';
+        const price = row.querySelector('.item-price').value.trim() || '0.00';
+        billText += `  ${index + 1}. ${item} - LKR ${parseFloat(price).toFixed(2)}\n`;
+      });
+
+      billText += `\n${totalText}`;
+
+      const blob = new Blob([billText], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `Bill_${customerName.replace(/\s+/g, '_')}_${getFormattedDate()}.txt`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function getFormattedDate() {
+      const now = new Date();
+      const day = now.getDate().toString().padStart(2, '0');
+      const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
+                          "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+      const month = monthNames[now.getMonth()];
+      const year = now.getFullYear();
+      return `${day}${month}${year}`;
+    }
+
+  </script>
+
+</body>
+</html>

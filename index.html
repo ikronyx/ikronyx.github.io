@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iKronyx Solutions</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+    <style>
+/* Reset */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Grid Container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px; /* Space between columns */
+      padding: 20px;
+    }
+
+    /* Grid Items */
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Overlay Text */
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Link Styles */
+    .grid-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Hover Effect */
+    .grid-item:hover .overlay-text {
+      opacity: 1;
+    }
+
+    .profile-image-container {
+        display: flex;
+        justify-content: start;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .small-description {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+      }
+    }
+
+
+    </style>
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#deployments">Deployments</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link js-scroll-trigger" href="#awards">Awards</a> -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">iKronyx
+          </h1>
+          <div class="subheading mb-2">Empowering your future with Cutting-Edge Digital Solutions
+          </div>
+          <p class="mb-5">Creative developer with expertise in React, web design, AI-powered stock image creation, and video editing, delivering innovative, user-focused digital solutions that blend functionality with modern aesthetics</p>
+          <div class="profile-image-container mb-4">
+            <img src="img/profile.jpg" alt="Profile Image" class="profile-image">
+          </div>
+
+          <!-- Additional Info -->
+          <h3 class="mt-3">Gayashan Perera</h3>
+          <p class="small-description">Passionate about crafting seamless digital experiences, leveraging the latest in AI and web technologies.</p>
+          
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/ikronyx" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/gayashan-perera-94635139/" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/Gayashan1991?tab=repositories" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <strong class="fa-stack-1x fa-inverse">A</strong>
+                  </span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <strong class="fa-stack-1x fa-inverse">F</strong>
+                  </span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <strong class="fa-stack-1x fa-inverse">U</strong>
+                  </span>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Founder | IT Consultant | Web & Mobile Developer</h3>
+              <div class="subheading mb-3">iKronyx Solutions</div>
+              <p>Bring to the table cutting-edge technology solutions, from automated systems to AI-driven learning aids, ensuring efficient and user-focused outcomes. Delivered a range of impactful projects spanning web scraping, cloud services, and innovative mobile applications</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2017 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Associate Software Engineer - Mobile Development</h3>
+              <div class="subheading mb-3">Sanrika Holdings Pvt Ltd</div>
+              <p>Capitalize on resource allocation strategies while optimizing database logics and enhancing UI/UX designs to elevate user experience. Delivered robust solutions through native Android development, database migrations, and performance testing.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">April 2018 - January 2021</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Mobile App Developer cum Web/Graphic Designer</h3>
+              <div class="subheading mb-3">Mutants International Pvt Ltd</div>
+              <p>Seamlessly integrated advanced Android development techniques with custom graphic design, delivering client-tailored applications and achieving high satisfaction scores.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">April 2016 - August 2016</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Sri Lanka Institute of Information Technology</h3>
+              <div class="subheading mb-3">Bachelor of Science</div>
+              <div>Information Technology</div>
+              <p>GPA: 3.4</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">January 2012 - May 2016</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Isipathana College, Colombo 05000</h3>
+              <div class="subheading mb-3">Combined Mathematics</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2007 - May 2010</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-sass"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-less"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-wordpress"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-grunt"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-gulp"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-npm"></i>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Functional Teams</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Projects</h2>
+          <h3>AI Powered Projects</h3>
+          <div class="subheading mb-3">Personalized Recipe Recommender with Nutritional Optimization (Python/ML) <span><a href="https://github.com/Gayashan1991/personalized-recipe-planner-2" target="_blank"><img src="img/gitico.png" alt="" width="25" height="25"></a></span></div>
+          <p>A personalized recipe recommendation system that suggests recipes based on user preferences, health goals, and nutritional optimization. It uses a dataset of recipes and applies various filters to recommend the best recipes that match the user's health goals (e.g., low-carb, high-protein, balanced). It also allows for the optimization of recipes based on nutritional values.</p>
+          
+          <div class="subheading mb-3">Travel Expense Refiner (Python/ML) <span><a href="https://github.com/Gayashan1991/travel-expense-optimizer" target="_blank"><img src="img/gitico.png" alt="" width="25" height="25"></a></span></div>
+          <p>The Travel Expense Refiner is an AI-powered Python-based tool that helps you plan your travel budget by integrating with multiple APIs to optimize travel expenses. It calculates the costs for flights, accommodation, transport, and more based on user input and provides a budget summary.
+          <br>Features:</p>
+          <ul>
+            <li>Calculates flight prices using the Skyscanner API.</li>
+            <li>Fetches accommodation details from Booking.com API.</li>
+            <li>Estimates local transport costs with Google Maps Distance Matrix API.</li>
+            <li>Converts currencies using ExchangeRate-API.</li>
+            <li>Compares total expenses with your defined travel budget.</li>
+            <li>Supports JSON-based user input for easy configuration.</li>
+          </ul>
+          <div class="subheading mb-3">Automated Gazette Extractor and Search Engine Web Project (React JS/Python/Dhango)</div>      
+          <ul>
+            <li>Python-based web scraping, text extraction, summarization, and document clustering.</li>
+            <li>Integrated Python NLTK and Hadoop DFS for efficient data processing.</li>
+            <li>Django REST Framework for seamless data display in ReactJS web interfaces.</li>
+            <li>Designed front-end applications with ReactJS, HTML, and CSS.</li>
+          </ul>
+          <div class="subheading mb-3">AiKO - (Iskole) (Android/Python/ML/DL)</div>
+          <ul>
+            <li>Specialized learning aid diagnosing ADHD symptoms in children during early stages.</li>
+            <li>Developed a scheduler tailored to children's learning needs with instruction prediction using Random Forest.</li>
+            <li>Maintained scripts and a knowledge base using Firebase cloud services.</li>
+          </ul>
+          <div class="subheading mb-3">Touch2Buy (Android/PHP/MySQL)</div>
+          <p>A native Android app for restaurant discovery in Colombo suburbs.</p>
+          <ul>
+            <li>Built RESTful APIs using Swagger and consumed API data via Retrofit.</li>
+            <li>Managed MySQL databases and integrated Firebase push notifications and in-app messaging.</li>
+            <li>Designed custom graphics sets, significantly boosting client satisfaction.</li>
+          </ul>
+
+          <br>
+          <h3>Commercial Website Designs</h3>
+          <br>
+          <div class="grid-container mb-5">
+            <div class="grid-item">
+              <a href="https://odsi.co" target="_blank">
+                <div class="overlay-text">ODSI.CO</div>
+                <img src="img/odsi.jpg" alt="Placeholder Image 1">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://isipathanaoba.lk/" target="_blank">
+                <div class="overlay-text">IC OBA</div>
+                <img src="img/icoba.jpg" alt="Placeholder Image 2">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://gayashan1991.github.io/TND/index.html" target="_blank">
+                <div class="overlay-text">Treats & Delights</div>
+                <img src="img/tnd.jpg" alt="Placeholder Image 3">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://spholdings.lk/" target="_blank">
+                <div class="overlay-text">SP Holdings</div>
+                <img src="img/sp.jpg" alt="Placeholder Image 3">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.globalhotelsupply.com/" target="_blank">
+                <div class="overlay-text">Global Hotel Supply</div>
+                <img src="img/ghs.jpg" alt="Placeholder Image 3">
+              </a>
+            </div>
+          </div>
+
+          <br>
+          <h3>Graphic Design</h3>
+          <br>
+          <div>
+            <h4>Adobe Stock</h4>
+          </div>
+          <div class="grid-container mb-3">
+            <div class="grid-item">
+              <a href="https://stock.adobe.com/lk/contributor/211520706/Gayashan">
+                <img src="img/gd1.jpg" alt="Placeholder Image 1">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://stock.adobe.com/lk/contributor/211520706/Gayashan">
+                <img src="img/gd2.jpg" alt="Placeholder Image 2">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://stock.adobe.com/lk/contributor/211520706/Gayashan">
+                <img src="img/gd3.jpg" alt="Placeholder Image 3">
+              </a>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <a href="https://stock.adobe.com/lk/contributor/211520706/Gayashan" target="_blank"><h5>View All</h5></a>
+          </div>
+
+          <br>
+          <div>
+            <h4>Freepik</h4>
+          </div>
+          <div class="grid-container mb-3">
+            <div class="grid-item">
+              <a href="https://www.freepik.com/author/gayash">
+                <img src="img/gdf1.jpg" alt="Placeholder Image 1">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.freepik.com/author/gayash">
+                <img src="img/gdf2.jpg" alt="Placeholder Image 2">
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="https://www.freepik.com/author/gayash">
+                <img src="img/gdf3.jpg" alt="Placeholder Image 3">
+              </a>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <a href="https://www.freepik.com/author/gayash" target="_blank"><h5>View All</h5></a>
+          </div>
+
+        </div>
+
+        
+      </section>
+
+
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="deployments"> 
+        <div class="my-auto">
+          <h2 class="mb-5">Temporary Deployments</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              <a href="https://gayashan1991.github.io/blb/index.html">Blue Lanka Billing</a></li>
+            <li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards"> 
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Google Analytics Certified Developer</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              Mobile Web Specialist - Google Certification</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              2<sup>nd</sup>
+              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              Place - James Buchanan High School - Hackathon 2006</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              3<sup>rd</sup>
+              Place - James Buchanan High School - Hackathon 2005</li>
+          </ul>
+        </div>
+      </section> -->
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
+</html>
