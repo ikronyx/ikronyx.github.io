@@ -1,7 +1,17 @@
 [
   {
-    "name": "Template 1",
+    "name": "Interior Design Template 1",
     "path": "int-design-te-1/index.html",
+    "preview": "../img/imgimg.jpg"
+  },
+  {
+    "name": "Interior Design Template 2",
+    "path": "int-design-te-2/index.html",
+    "preview": "../img/imgimg.jpg"
+  },
+  {
+    "name": "Interior Design Template 3",
+    "path": "int-design-te-3/index.html",
     "preview": "../img/imgimg.jpg"
   }
 ]
