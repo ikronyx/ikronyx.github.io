@@ -38,7 +38,16 @@
     /* Grid Container */
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
+      /* 3 equal columns */
+      gap: 20px;
+      /* Space between columns */
+      padding: 20px;
+    }
+
+    .grid-container-large {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       /* 3 equal columns */
       gap: 20px;
       /* Space between columns */
@@ -116,10 +125,20 @@
         grid-template-columns: repeat(2, 1fr);
         /* 2 columns on tablets */
       }
+
+      .grid-container-large {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+      }
     }
 
     @media (max-width: 480px) {
       .grid-container {
+        grid-template-columns: 1fr;
+        /* 1 column on small screens */
+      }
+
+      .grid-container-large {
         grid-template-columns: 1fr;
         /* 1 column on small screens */
       }
@@ -386,7 +405,7 @@
           Featured Recent Projects
         </h2>
 
-        <div class="grid-container mb-5">
+        <div class="grid-container-large mb-5">
           <div class="grid-item"
             style="position: relative; border: 2px solid #4b4b4b; border-radius: 12px; overflow: hidden;">
             <a href="https://paththareads-hastec-v2.vercel.app/" target="_blank"
